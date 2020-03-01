@@ -1,10 +1,4 @@
-const env = require("dotenv");
-
-const envConfig = env.config();
-
-if (envConfig.error) {
-    throw envConfig.error
-}
+require("dotenv").config();
 
 const express = require('express');
 const Text = require("./models/text");
