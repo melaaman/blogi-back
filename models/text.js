@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
-const url = process.env.MONGOURI;
-
-console.log("connecting to", url);
-
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(__result => {
         console.log("Connected to MongoDB")
     })
