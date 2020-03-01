@@ -1,16 +1,17 @@
 require("dotenv").config();
-const express = require('express');
-const app = express();
 
+const express = require('express');
 const Text = require("./models/text");
 
-app.get('/api/texts', (__, res) => {
-    Text.find({}).then(t => {
-        res.json(t.map(item => item.toJSON()));
+const app = express();
+
+app.get('/api/texts', (__req, res) => {
+    Text.find({}).then(texts => {
+        res.json(texts.map(text => text.toJSON()));
     });
 });
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+    console.log(`Server running on port ${PORT}`);
 });
