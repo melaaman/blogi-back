@@ -2,10 +2,16 @@ require("dotenv").config();
 
 const express = require('express');
 const Text = require("./models/text");
+const cors = require('cors')
+
+var corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 const app = express();
 
-app.get('/api/texts', (__req, res) => {
+app.get('/api/texts', cors(corsOptions), (__req, res) => {
     Text.find({}).then(texts => {
         res.json(texts.map(text => text.toJSON()));
     });
