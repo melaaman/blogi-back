@@ -4,7 +4,7 @@ const url = process.env.MONGOURI;
 
 console.log("connecting to", url);
 
-mongoose.connect(process, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(__result => {
         console.log("Connected to MongoDB")
     })
