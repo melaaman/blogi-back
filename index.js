@@ -5,7 +5,7 @@ const Text = require("./models/text");
 const cors = require('cors')
 
 var corsOptions = {
-    origin: ['http://localhost:3000', 'https://dev.d33q3rezngv61p.amplifyapp.com', 'https://master.d33q3rezngv61p.amplifyapp.com'],
+    origin: ['http://localhost:3000', 'https://dev.d33q3rezngv61p.amplifyapp.com', 'https://www.versusmaailma.com'],
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
