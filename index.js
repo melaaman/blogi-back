@@ -19,5 +19,5 @@ app.get('/api/texts', cors(corsOptions), (__req, res) => {
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}!`);
 });
